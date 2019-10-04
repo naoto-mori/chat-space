@@ -1,0 +1,11 @@
+ * {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@import "reset";
+@import "index";
+@import 'font-awesome';
