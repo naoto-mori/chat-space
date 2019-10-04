@@ -1,6 +1,11 @@
-/*
- *= require_tree .
- *= require_self
- */
-	
- @import "reset"
+ * {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@import "reset";
+@import "index";
+@import 'font-awesome';
