@@ -1,13 +1,3 @@
-// .top-window {
-//   width: 100vw;
-//   height: 24px;
-//   background-color: #38AEF0;
-//   .p {
-//     text-align: center;
-//     color: white;
-//   }
-// }
-
 .body{
   height: 100vh;
   width: 100vw;
@@ -16,60 +6,61 @@
     height: 100%;
     width: 300px;
     background-color: #253141;
-      .user-header{
-        height: 100px;
-        width: 300px;
-        padding: 0 20px;
-        position: relative;
-          .user-header_box{
-            height: 24px;
-            width: 260px;
-            color: white;
-            position: absolute;
-            margin: 38px 0;
-            display: flex;
-            justify-content: space-between;
-              .name-box{
-                font-size: 16px;
-                font-weight: bold;
-                .p{
-                }
-              }
-              .icon-box{
-                display: flex;
-                .new-group_icon{
-                  .edit-icon{
-                    color: white;
-                  }
-                }
-                .sdit-user_icon{
-                  .cog-icon{
-                    color: white;
-                  }
-                }
-              }
+    .user-header{
+      height: 100px;
+      width: 300px;
+      padding: 0 20px;
+      position: relative;
+      .user-header_box{
+        height: 24px;
+        width: 260px;
+        color: white;
+        position: absolute;
+        margin: 38px 0;
+        display: flex;
+        justify-content: space-between;
+        .name-box{
+          font-size: 16px;
+          font-weight: bold;
+          .p{
           }
-      }
-      .group-menu{
-        height: calc(100% - 100px);
-        width: 300px;
-        padding: 20px 20px 0;
-        background-color: #2f3e51;
-          .group-menu_space{
-            height: 45px;
-            width: 260px;
-            margin: 0 0 40px;
-            color: white;
-              .group-name{
-                font-size: 15px;
-                width: 100%;
-              }
-              .message-preview{
-                font-size: 11px;
-                width: 100%;
-              }
+        }
+        .icon-box{
+          display: flex;
+          .new-group_icon{
+            .icon{
+              color: white;
+            }
           }
+          .edit-user_icon{
+            margin-left: 5px;
+            .icon{
+              color: white;
+            }
+          }
+        }
       }
+    }
+    .group-menu{
+      height: calc(100% - 100px);
+      width: 300px;
+      padding: 20px 20px 0;
+      background-color: #2f3e51;
+      .group-menu_space{
+        height: 45px;
+        width: 260px;
+        margin: 0 0 40px;
+        color: white;
+        .group-name{
+          font-size: 15px;
+          width: 100%;
+        }
+        .message-preview{
+          font-size: 11px;
+          width: 100%;
+        }
+      }
+    }
   }
   .right-box{
     height: 100%;
