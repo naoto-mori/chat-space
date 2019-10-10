@@ -1,5 +1,8 @@
 class GroupsController < ApplicationController
+
+  
   def index
+    @group = Group.new
   end
 
   def new
@@ -17,6 +20,7 @@ class GroupsController < ApplicationController
   end
 
   def update
+    if @group.update(group_params)
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
       render :edit
@@ -28,7 +32,4 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, { :user_ids => [] })
   end
 
-  def set_group
-    @group = Group.find(params[:id])
-  end
 end

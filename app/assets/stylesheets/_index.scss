@@ -46,19 +46,17 @@
       width: 300px;
       padding: 20px 20px 0;
       background-color: #2f3e51;
-      .group-menu_space{
-        height: 45px;
-        width: 260px;
+      overflow: scroll;
+      .group-name{
+        font-size: 15px;
+        width: 100%;
+        color: #fff;
+      }
+      .message-preview{
+        font-size: 11px;
+        width: 100%;
+        color: #fff;
         margin: 0 0 40px;
-        color: white;
-        .group-name{
-          font-size: 15px;
-          width: 100%;
-        }
-        .message-preview{
-          font-size: 11px;
-          width: 100%;
-        }
       }
     }
   }
@@ -149,57 +147,55 @@
         height: 90px;
         width: 100%;
         padding: 20px 40px;
-        display: flex;
-        justify-content: space-between;
         background-color: #dddddd;
-        .message-form_box{
-          height: 50px;
-          width: calc(100% - 100px);
-          padding: 0 0 0 10px;
-          background-color: #fff;
-          display: flex;
-          justify-content: space-between;
-            .message_form{
-              height: 50px;
-              width: 590px;
-                .p{
-                  color: #434a54;
-                  line-height: 50px;
-                }
-            }
-            .img-btn_box{
-              height: 50px;
-              width: 40px;
-                .img{
-                  text-align: center;
-                  line-height: 50px;    
-                  .main-form__image {
+          .message-form_box{
+            height: 50px;
+            width: 100%;
+            padding: 0 0 0 10px;
+            background-color: #fff;
+            position: relative;
+              .message_form{
+                height: 50px;
+                width: calc(100% - 140px);
+                border-style: none;
+              }
+              .img-btn_box{
+                height: 50px;
+                width: 40px;
+                position: absolute;
+                right: 90px;
+                top: 0;
+                  .img{
+                    text-align: center;
+                    line-height: 50px;
+                    margin: 0;
                     cursor: pointer;
-                    i {
-                      font-size: 1.3em;
-                      color: black;
-                    }
-                    &--default {
-                      display: none;
-                    }
+                      .icon {
+                        font-size: 1.3em;
+                        color: black;
+                      }
+                      .hidden {
+                        display: none;
+                      }
                   }
-                }
-            }
-        } 
-        .send-btn_box{
-          height: 50px;
-          width: 100px;
-          background-color: #38aef0;
-          padding: 0 30px;
-          margin: 0 0 0 15px;
-          cursor: pointer;
-            .p{
-              color: white;
-              text-align: center;
-              line-height: 50px;
-              font-size: 16px;
-            }
-        }
+              }
+              .send-btn_box{
+                height: 50px;
+                width: 100px;
+                background-color: #38aef0;
+                position: absolute;
+                right: 0;
+                padding: 0 30px;
+                // margin-left: 15px;
+                cursor: pointer;
+                color: white;
+                text-align: center;
+                line-height: 50px;
+                font-size: 16px;
+              }
+          
+          }
       }
+
   }
 }

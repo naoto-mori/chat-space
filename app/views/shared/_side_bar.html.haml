@@ -12,9 +12,8 @@
             = fa_icon 'cog', class: 'icon'
   .group-menu
     - current_user.groups.each do |group|
-      .group-menu_space
       = link_to group_messages_path(group) do
         .group-name
           = group.name
         .message-preview
-          .p Message Preview
+          = group.show_last_message
