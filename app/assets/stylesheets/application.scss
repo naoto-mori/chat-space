@@ -1,5 +1,6 @@
  * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 *::-webkit-scrollbar {
@@ -9,3 +10,7 @@
 @import "reset";
 @import "index";
 @import 'font-awesome';
+@import "modules/user";
+@import "config/colors";
+@import "modules/flash";
+@import "modules/group";
