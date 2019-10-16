@@ -39,7 +39,7 @@ $(document).on('turbolinks:load', function(){
     .done(function(message){
       var html = buildMessage(message);
       $('.message-room').append(html);
-      $('#message_content').val('');
+      $('.new_message')[0].reset();
       scroll();
     })
     .fail(function(){
