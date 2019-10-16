@@ -9,7 +9,8 @@
           .member-title
             .p member
           .member
-            = current_user.name
+            - @group.users.each do |user|
+              = user.name
       .group-header_right-box
         = link_to edit_group_path(@group) do
           .p EDIT

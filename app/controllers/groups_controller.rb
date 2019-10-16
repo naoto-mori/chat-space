@@ -1,9 +1,7 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user!
   before_action :find_group_params, only: [:edit, :update]
   
   def index
-    @groups = current_user.groups.order(id: :DESC)
   end
 
   def new
@@ -33,9 +31,7 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    user_ids = params[:group]["user_ids"]
-    # user_ids << current_user.id.to_s
-    params.require(:group).permit(:name, user_ids: [])
+    params.require(:group).permit(name: { user_ids: [] })
   end
 
   def find_group_params
