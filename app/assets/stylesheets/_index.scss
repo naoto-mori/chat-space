@@ -152,33 +152,38 @@
           .message-form_box{
             height: 50px;
             width: 100%;
-            padding: 0 0 0 10px;
-            background-color: #fff;
             position: relative;
-              .message_form{
+              .text-border{
                 height: 50px;
-                width: calc(100% - 140px);
-                border-style: none;
-              }
-              .img-btn_box{
-                height: 50px;
-                width: 40px;
-                position: absolute;
-                right: 90px;
-                top: 0;
-                  .img{
-                    text-align: center;
-                    line-height: 50px;
-                    margin: 0;
-                    cursor: pointer;
-                      .icon {
-                        font-size: 1.3em;
-                        color: black;
-                      }
-                      .hidden {
-                        display: none;
-                      }
-                  }
+                width: calc(100% - 110px);
+                background-color: #fff;
+                padding: 0 0 0 10px;
+                .message_form{
+                  border-style: none;
+                  height: 50px;
+                  width: calc(100% - 50px);
+                }
+                .img-btn_box{
+                  height: 50px;
+                  width: 40px;
+                  position: absolute;
+                  right: 105px;
+                  top: 0;
+                    .img{
+                      text-align: center;
+                      line-height: 50px;
+                      margin: 0;
+                      cursor: pointer;
+                        .icon {
+                          font-size: 1.3em;
+                          color: black;
+                        }
+                        .hidden {
+                          display: none;
+                        }
+                    }
+                }
+
               }
               .send-btn_box{
                 height: 50px;
@@ -187,7 +192,6 @@
                 position: absolute;
                 right: 0;
                 padding: 0 30px;
-                // margin-left: 15px;
                 cursor: pointer;
                 color: white;
                 text-align: center;
