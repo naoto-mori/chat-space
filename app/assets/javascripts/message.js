@@ -37,7 +37,6 @@ $(document).on('turbolinks:load', function(){
     })
 
     .done(function(message){
-      console.log("OK");
       var html = buildMessage(message);
       $('.message-room').append(html);
       $('.new_message')[0].reset();
