@@ -3,7 +3,7 @@ $(document).on('turbolinks:load', function(){
   function buildMessage(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
-    var html = `<div class="message-box" message-id="${message.id} style="heght: 25px;">
+    var html = `<div class="message-box" data-message-id= "${message.id} style="heght: 25px;">
                   <div class="comment-user_detail" style="display: flex;">
                     <div class="user-name_box">${message.user_name}</div>
                     <div class="time-log" style="padding-left: 10px;">
@@ -48,6 +48,30 @@ $(document).on('turbolinks:load', function(){
     .always(function(){
       $('.send-btn_box').prop('disabled', false);
     })
+  });
 
-  })
+  var reloadMessages = function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      last_message_id = $('.message-box:last').data("message-id");
+
+      $.ajax({
+        url: "api/messages",
+        type: 'get',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        var insert ='';
+        messages.forEach(function(message) {
+          insert = buildMessage(message);
+          $('.message-room').append(insert);
+          scroll();
+        })
+      })
+      .fail(function () {
+        alert('自動更新に失敗しました');
+      });
+    }
+  };
+  setInterval(reloadMessages, 5000);
 });
