@@ -1,4 +1,4 @@
-.message-box{ "message-id": "#{message.id}"}
+.message-box{"data-message-id": "#{message.id}"}
   .comment-user_detail
     .user-name_box
       = message.user.name
@@ -8,4 +8,4 @@
     - if message.content.present?
       %p.content
         = message.content
-      = image_tag message.image.url, class: 'image' if message.image.present?
+      = image_tag message.image.url, class: 'lower-message_image' if message.image.present?
